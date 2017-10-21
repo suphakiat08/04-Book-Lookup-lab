@@ -16,6 +16,10 @@ describe('BookLookup App', function() {
         let app = new BookShelfApp(mockFn)
         let result = app.search(isbn)
 
+        expect(result).toHaveProperty('bookname')
+        expect(result).toHaveProperty('cover')
+        expect(result).toHaveProperty('isbn')
+
         expect(result.bookname).toBe('reborn')
         expect(result.cover).toBe('001925.png')
         expect(result.isbn).toBe('001925')
