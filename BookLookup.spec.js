@@ -23,6 +23,8 @@ describe('BookLookup App', function() {
         expect(result.bookname).toBe('reborn')
         expect(result.cover).toBe('001925.png')
         expect(result.isbn).toBe('001925')
+
+        expect(result).toEqual({'bookname': 'reborn', 'cover': '001925.png', 'isbn': '001925'})
         
         expect(mockFn).toHaveBeenCalled()
         expect(mockFn).toHaveBeenCalledWith(isbn)
